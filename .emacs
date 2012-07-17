@@ -96,10 +96,6 @@
 ;; multiterm
 (require 'multi-term)
 
-;; nav
-(add-to-list 'load-path "~/.emacs.d/nav/")
-(require 'nav)
-
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
