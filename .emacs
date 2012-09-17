@@ -16,6 +16,16 @@
 (global-hl-line-mode t)
 (global-auto-revert-mode 1)
 
+;; open marked files
+(eval-after-load "dired"
+  '(progn
+     (define-key dired-mode-map "F" 'my-dired-find-file)
+     (defun my-dired-find-file (&optional arg)
+       "Open each of the marked files, or the file under the point, or when prefix arg, the next N files "
+       (interactive "P")
+       (let* ((fn-list (dired-get-marked-files nil arg)))
+         (mapc 'find-file fn-list)))))
+
 ;; tabs
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
@@ -29,10 +39,6 @@
 (setq backup-directory-alist `(("." . "~/.emacs.backups/")))
 (setq auto-save-list-file-prefix "~/.emacs.backups/")
 (setq auto-save-file-name-transforms `((".*" "~/.emacs.backups/" t)))
-
-;; line numbers
-;; (require 'linum)
-;; (global-linum-mode t)
 
 ;; lua support
 (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
@@ -60,10 +66,6 @@
 (require 'json-mode)
 
 (setq auto-mode-alist (cons '("\\.json$" . json-mode) auto-mode-alist))
-
-;; c mode
-(setq c-basic-offset 4)
-(setq c-default-style '((java-mode . "java") (awk-mode . "awk") (other . "bsd")))
 
 ;; clipboard support
 (defun mac-copy ()
@@ -101,12 +103,5 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-;; maybe add ac-source-words-in-same-mode-buffers to
-;; ac-sources. and for additional keywords maybe you want snippets?
-;;          there's ac-source-yasnippet
 
-;; (indent-relative &optional UNINDENTED-OK) 
-
-;; (defun kill-this-line () (interactive) (kill-new (thing-at-point
-;;        'line)))
 
