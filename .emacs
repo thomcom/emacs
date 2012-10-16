@@ -34,6 +34,9 @@
 ;; filling
 (setq-default fill-column 80)
 
+;; undo / redo
+(setq undo-limit 1337)
+
 ;; backups
 (setq backup-by-copying t)
 (setq backup-directory-alist `(("." . "~/.emacs.backups/")))
@@ -64,6 +67,9 @@
 
 ;; json
 (require 'json-mode)
+
+;; c-sharp
+(require 'csharp-mode)
 
 (setq auto-mode-alist (cons '("\\.json$" . json-mode) auto-mode-alist))
 
