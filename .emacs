@@ -68,9 +68,6 @@
 ;; json
 (require 'json-mode)
 
-;; c-sharp
-(require 'csharp-mode)
-
 (setq auto-mode-alist (cons '("\\.json$" . json-mode) auto-mode-alist))
 
 ;; clipboard support
@@ -93,6 +90,12 @@
 ;; org mode
 (require 'org)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(setq org-startup-indented t)
+(add-hook 'org-mode-hook
+          (lambda ()
+            (visual-line-mode t)
+            (auto-fill-mode t))
+          t)
 
 ;; fullack
 (add-to-list 'load-path "~/.emacs.d/full-ack")
