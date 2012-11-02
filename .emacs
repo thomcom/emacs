@@ -9,9 +9,11 @@
 ;; basic settings
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
 (column-number-mode t)
 (fset 'yes-or-no-p 'y-or-n-p)
-(menu-bar-mode 0)
 (show-paren-mode t)
 (global-hl-line-mode t)
 (global-auto-revert-mode 1)
@@ -36,6 +38,11 @@
 
 ;; undo / redo
 (setq undo-limit 1337)
+
+;; find other file
+;;(global-set-key (kbd "C-c o") 'ff-find-other-file)
+(global-set-key (kbd "C-c o") (lambda () (interactive)
+                                (ff-find-other-file t)))
 
 ;; backups
 (setq backup-by-copying t)
@@ -112,5 +119,14 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;; marmalade
+(require 'package)
+(add-to-list 'package-archives 
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(package-initialize)
 
+;; expand-region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 
