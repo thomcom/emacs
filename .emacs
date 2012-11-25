@@ -36,8 +36,8 @@
 ;; filling
 (setq-default fill-column 80)
 
-;; undo / redo
-(setq undo-limit 1337)
+;; undo tree
+(require 'undo-tree)
 
 ;; find other file
 ;;(global-set-key (kbd "C-c o") 'ff-find-other-file)
