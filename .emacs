@@ -36,9 +36,6 @@
 ;; filling
 (setq-default fill-column 80)
 
-;; undo tree
-(require 'undo-tree)
-
 ;; find other file
 ;;(global-set-key (kbd "C-c o") 'ff-find-other-file)
 (global-set-key (kbd "C-c o") (lambda () (interactive)
@@ -129,4 +126,8 @@
 ;; expand-region
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+;; undo tree
+(require 'undo-tree)
+(global-undo-tree-mode)
 
