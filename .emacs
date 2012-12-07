@@ -9,6 +9,7 @@
 ;; basic settings
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
+(setq initial-scratch-message "")
 (menu-bar-mode -1)
 (if (functionp 'tool-bar-mode) (tool-bar-mode -1))
 (if (functionp 'scroll-bar-mode) (scroll-bar-mode -1))
