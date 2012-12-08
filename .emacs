@@ -20,8 +20,8 @@
 (global-auto-revert-mode 1)
 
 ;; window layout
-(setq split-height-threshold nil)
-(setq split-width-threshold 0)
+;; (setq split-height-threshold nil)
+;; (setq split-width-threshold 0)
 
 ;; open marked files
 (eval-after-load "dired"
