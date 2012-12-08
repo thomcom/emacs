@@ -19,6 +19,10 @@
 (global-hl-line-mode t)
 (global-auto-revert-mode 1)
 
+;; window layout
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)
+
 ;; open marked files
 (eval-after-load "dired"
   '(progn
@@ -38,7 +42,6 @@
 (setq-default fill-column 80)
 
 ;; find other file
-;;(global-set-key (kbd "C-c o") 'ff-find-other-file)
 (global-set-key (kbd "C-c o") (lambda () (interactive)
                                 (ff-find-other-file t)))
 
@@ -133,7 +136,5 @@
 (global-undo-tree-mode)
 
 ;; yasnippet
-;; (add-to-list 'load-path
-;;              "~/path-to-yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
