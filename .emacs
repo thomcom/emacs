@@ -37,15 +37,6 @@
 ;; map file extensions to modes
 (require 'mode-mappings)
 
-;; (autoload 'lua-mode "lua-mode" "Lua editing mode." t)                                                                       ;; (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))                                                                      ;; (add-to-list 'interpreter-mode-alist '("lua" . lua-mode)) 
-
-;; ;; objective c
-;; (setq auto-mode-alist (cons '("\\.mm$" . objc-mode) auto-mode-alist))
-
-;; ;; json
-;; (require 'json-mode)
-;; (setq auto-mode-alist (cons '("\\.json$" . json-mode) auto-mode-alist))
-
 ;; ;; clipboard support
 ;; (defun mac-copy ()
 ;;   (shell-command-to-string "pbpaste"))
