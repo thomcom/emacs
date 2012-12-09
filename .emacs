@@ -27,10 +27,7 @@
 (eval-after-load 'dired '(require 'setup-dired))
 (require 'setup-theme)
 (require 'setup-undo-tree)
-
-;; ;; find other file
-;; (global-set-key (kbd "C-c o") (lambda () (interactive)
-;;                                 (ff-find-other-file t)))
+(require 'setup-ffip)
 
 ;; ;; backups
 ;; (setq backup-by-copying t)
