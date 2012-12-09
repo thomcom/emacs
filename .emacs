@@ -25,6 +25,7 @@
 (require 'setup-defaults)
 (require 'setup-theme)
 (eval-after-load 'dired '(require 'setup-dired))
+(eval-after-load 'org '(require 'setup-org))
 (require 'setup-ido)
 (require 'setup-ffip)
 
