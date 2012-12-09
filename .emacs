@@ -27,6 +27,7 @@
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'org '(require 'setup-org))
 (require 'setup-ido)
+(require 'setup-uniquify)
 (require 'setup-ffip)
 
 ;; setup extensions
@@ -50,10 +51,6 @@
 
 ;; (setq interprogram-cut-function 'mac-paste)
 ;; (setq interprogram-paste-function 'mac-copy)
-
-;; ;; uniquify
-;; (require 'uniquify)
-;; (setq uniquify-buffer-name-style 'post-forward uniquify-separator ":")
 
 ;; ;; auto-complete
 ;; (add-to-list 'load-path "~/.emacs.d/auto-complete/")
