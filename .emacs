@@ -14,7 +14,8 @@
   (packages-install
    (cons 'undo-tree marmalade)
    (cons 'lua-mode marmalade)
-   (cons 'auto-complete melpa)))
+   (cons 'auto-complete melpa)
+   (cons 'yasnippet melpa)))
 
 (condition-case nil
     (init--install-packages)
@@ -33,15 +34,10 @@
 (require 'setup-clipboard)
 
 ;; setup extensions
+(eval-after-load 'lua-mode '(require 'setup-lua))
 (require 'setup-undo-tree)
 (require 'setup-auto-complete)
-
-;; setup language extensions
-(eval-after-load 'lua-mode '(require 'setup-lua))
+(require 'setup-yasnippet)
 
 ;; map file extensions to modes
 (require 'mode-mappings)
-
-;; ;; yasnippet
-;; (setq yas-snippet-dirs "~/.emacs.d/snippets")
-;; (yas-global-mode 1)
