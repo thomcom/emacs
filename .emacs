@@ -12,7 +12,8 @@
 ;; install missing extensions
 (defun init--install-packages ()
   (packages-install
-   (cons 'undo-tree marmalade)))
+   (cons 'undo-tree marmalade)
+   (cons 'lua-mode marmalade)))
 
 (condition-case nil
     (init--install-packages)
@@ -30,11 +31,13 @@
 ;; setup extensions
 (require 'setup-undo-tree)
 
-;; ;; lua support
-;; (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
-;; (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-;; (add-hook 'lua-mode-hook 'turn-on-font-lock)
-;; (setq lua-indent-level 4)
+;; setup language extensions
+(eval-after-load 'lua-mode '(require 'setup-lua-mode))
+
+;; map file extensions to modes
+(require 'mode-mappings)
+
+;; (autoload 'lua-mode "lua-mode" "Lua editing mode." t)                                                                       ;; (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))                                                                      ;; (add-to-list 'interpreter-mode-alist '("lua" . lua-mode)) 
 
 ;; ;; objective c
 ;; (setq auto-mode-alist (cons '("\\.mm$" . objc-mode) auto-mode-alist))
