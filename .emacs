@@ -32,7 +32,7 @@
 (require 'setup-undo-tree)
 
 ;; setup language extensions
-(eval-after-load 'lua-mode '(require 'setup-lua-mode))
+(eval-after-load 'lua-mode '(require 'setup-lua))
 
 ;; map file extensions to modes
 (require 'mode-mappings)
@@ -53,23 +53,6 @@
 ;; ;; uniquify
 ;; (require 'uniquify)
 ;; (setq uniquify-buffer-name-style 'post-forward uniquify-separator ":")
-
-;; ;; org mode
-;; (require 'org)
-;; (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-;; (setq org-startup-indented t)
-;; (add-hook 'org-mode-hook
-;;           (lambda ()
-;;             (visual-line-mode t)
-;;             (auto-fill-mode t))
-;;           t)
-
-;; ;; fullack
-;; (add-to-list 'load-path "~/.emacs.d/full-ack")
-;; (autoload 'ack-same "full-ack" nil t)
-;; (autoload 'ack "full-ack" nil t)
-;; (autoload 'ack-find-same-file "full-ack" nil t)
-;; (autoload 'ack-find-file "full-ack" nil t)
 
 ;; ;; auto-complete
 ;; (add-to-list 'load-path "~/.emacs.d/auto-complete/")
