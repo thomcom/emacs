@@ -32,6 +32,12 @@
 (setq-default indent-tabs-mode nil)
 (setq c-default-style "k&r" c-basic-offset 4)
 
+;; ;; backups
+(setq backup-by-copying t)
+(setq backup-directory-alist `(("." . "~/.emacs.backups/")))
+(setq auto-save-list-file-prefix "~/.emacs.backups/")
+(setq auto-save-file-name-transforms `((".*" "~/.emacs.backups/" t)))
+
 ;; text must be 80 characters wide
 (setq-default fill-column 80)
 

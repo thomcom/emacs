@@ -29,12 +29,6 @@
 (require 'setup-undo-tree)
 (require 'setup-ffip)
 
-;; ;; backups
-;; (setq backup-by-copying t)
-;; (setq backup-directory-alist `(("." . "~/.emacs.backups/")))
-;; (setq auto-save-list-file-prefix "~/.emacs.backups/")
-;; (setq auto-save-file-name-transforms `((".*" "~/.emacs.backups/" t)))
-
 ;; ;; lua support
 ;; (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 ;; (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
