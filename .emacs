@@ -25,6 +25,7 @@
 
 ;; setup extensions
 (eval-after-load 'dired '(require 'setup-dired))
+(require 'setup-theme)
 (require 'setup-undo-tree)
 
 ;; ;; find other file
@@ -48,12 +49,6 @@
 ;; (ido-mode t)
 ;; (setq ido-enable-flex-matching t)
 ;; (setq ido-everywhere t)
-
-;; ;; color theme
-;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-;; (condition-case nil 
-;;     (load-theme 'gams t)
-;;   (wrong-number-of-arguments (load-theme 'gams)))
 
 ;; ;; objective c
 ;; (setq auto-mode-alist (cons '("\\.mm$" . objc-mode) auto-mode-alist))
