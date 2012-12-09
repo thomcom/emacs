@@ -20,26 +20,21 @@
    (package-refresh-contents)
    (init--install-packages)))
 
-;; setup defaults
+;; setup customizations
 (require 'setup-defaults)
+(require 'setup-theme)
+(eval-after-load 'dired '(require 'setup-dired))
+(require 'setup-ido)
+(require 'setup-ffip)
 
 ;; setup extensions
-(eval-after-load 'dired '(require 'setup-dired))
-(require 'setup-theme)
 (require 'setup-undo-tree)
-(require 'setup-ffip)
 
 ;; ;; lua support
 ;; (setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
 ;; (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 ;; (add-hook 'lua-mode-hook 'turn-on-font-lock)
 ;; (setq lua-indent-level 4)
-
-;; ;; ido mode
-;; (require 'ido)
-;; (ido-mode t)
-;; (setq ido-enable-flex-matching t)
-;; (setq ido-everywhere t)
 
 ;; ;; objective c
 ;; (setq auto-mode-alist (cons '("\\.mm$" . objc-mode) auto-mode-alist))
