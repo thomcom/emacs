@@ -13,7 +13,8 @@
 (defun init--install-packages ()
   (packages-install
    (cons 'undo-tree marmalade)
-   (cons 'lua-mode marmalade)))
+   (cons 'lua-mode marmalade)
+   (cons 'auto-complete melpa)))
 
 (condition-case nil
     (init--install-packages)
