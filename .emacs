@@ -9,18 +9,8 @@
 ;; setup package
 (require 'setup-package)
 
-;; basic settings
-(setq inhibit-splash-screen t)
-(setq inhibit-startup-message t)
-(setq initial-scratch-message "")
-(menu-bar-mode -1)
-(if (functionp 'tool-bar-mode) (tool-bar-mode -1))
-(if (functionp 'scroll-bar-mode) (scroll-bar-mode -1))
-(column-number-mode t)
-(fset 'yes-or-no-p 'y-or-n-p)
-(show-paren-mode t)
-(global-hl-line-mode t)
-(global-auto-revert-mode 1)
+;; setup defaults
+(require 'setup-defaults)
 
 ;; open marked files
 (eval-after-load "dired"
@@ -31,14 +21,6 @@
        (interactive "P")
        (let* ((fn-list (dired-get-marked-files nil arg)))
          (mapc 'find-file fn-list)))))
-
-;; tabs
-(setq-default tab-width 4)
-(setq-default indent-tabs-mode nil)
-(setq c-default-style "k&r" c-basic-offset 4)
-
-;; filling
-(setq-default fill-column 80)
 
 ;; find other file
 (global-set-key (kbd "C-c o") (lambda () (interactive)
