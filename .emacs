@@ -1,10 +1,13 @@
 ;; -------------------------
-;; Kevin Depue (2011)
+;; Kevin Depue (2012)
 ;; Emacs configuration file.
 ;; -------------------------
 
-;; lisp search paths
+;; load path
 (add-to-list 'load-path "~/.emacs.d/")
+
+;; setup package
+(require 'setup-package)
 
 ;; basic settings
 (setq inhibit-splash-screen t)
@@ -18,10 +21,6 @@
 (show-paren-mode t)
 (global-hl-line-mode t)
 (global-auto-revert-mode 1)
-
-;; window layout
-;; (setq split-height-threshold nil)
-;; (setq split-width-threshold 0)
 
 ;; open marked files
 (eval-after-load "dired"
@@ -66,16 +65,14 @@
 ;; color theme
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (condition-case nil 
-    (load-theme 'gams t) 
-  (wrong-number-of-arguments 
-   (load-theme 'gams)))
+    (load-theme 'gams t)
+  (wrong-number-of-arguments (load-theme 'gams)))
 
 ;; objective c
 (setq auto-mode-alist (cons '("\\.mm$" . objc-mode) auto-mode-alist))
 
 ;; json
 (require 'json-mode)
-
 (setq auto-mode-alist (cons '("\\.json$" . json-mode) auto-mode-alist))
 
 ;; clipboard support
@@ -112,29 +109,14 @@
 (autoload 'ack-find-same-file "full-ack" nil t)
 (autoload 'ack-find-file "full-ack" nil t)
 
-;; multiterm
-(require 'multi-term)
-
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/auto-complete/")
 (require 'auto-complete-config)
 (ac-config-default)
 
-;; marmalade
-(require 'package)
-(add-to-list 'package-archives 
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
-(package-initialize)
-
-;; expand-region
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
-
 ;; undo tree
-(require 'undo-tree)
 (global-undo-tree-mode)
 
 ;; yasnippet
-(require 'yasnippet)
+(setq yas-snippet-dirs "~/.emacs.d/snippets")
 (yas-global-mode 1)
