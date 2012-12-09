@@ -33,17 +33,13 @@
 
 ;; setup extensions
 (require 'setup-undo-tree)
+(require 'setup-auto-complete)
 
 ;; setup language extensions
 (eval-after-load 'lua-mode '(require 'setup-lua))
 
 ;; map file extensions to modes
 (require 'mode-mappings)
-
-;; ;; auto-complete
-;; (add-to-list 'load-path "~/.emacs.d/auto-complete/")
-;; (require 'auto-complete-config)
-;; (ac-config-default)
 
 ;; ;; yasnippet
 ;; (setq yas-snippet-dirs "~/.emacs.d/snippets")
