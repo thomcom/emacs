@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: bfclass
+# key: bfclass
+# expand-env: ((yas-indent-line 'fixed))
+# --
+class ${1:child} : public ${2:parent}
+{
+public:
+
+    /* construction */
+
+    DECLARE_CLASS( $1, $2 );
+
+    $0
+
+private:
+
+    /* data */    
+};  

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: impcomponent
+# key: impcomponent
+# --
+IMPLEMENT_COMPONENT_START( ${1:namespace}, ${2:class} )
+IMPLEMENT_COMPONENT_END

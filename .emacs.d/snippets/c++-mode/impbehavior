@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: impbehavior
+# key: impbehavior
+# --
+IMPLEMENT_BEHAVIOR_START( ${1:namespace}, ${2:class} )
+IMPLEMENT_BEHAVIOR_END
