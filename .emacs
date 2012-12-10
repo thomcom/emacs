@@ -15,7 +15,8 @@
    (cons 'undo-tree marmalade)
    (cons 'lua-mode marmalade)
    (cons 'auto-complete melpa)
-   (cons 'yasnippet melpa)))
+   (cons 'yasnippet melpa)
+   (cons 'multi-term melpa)))
 
 (condition-case nil
     (init--install-packages)
