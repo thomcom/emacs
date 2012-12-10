@@ -16,7 +16,8 @@
    (cons 'lua-mode marmalade)
    (cons 'auto-complete melpa)
    (cons 'yasnippet melpa)
-   (cons 'multi-term melpa)))
+   (cons 'multi-term melpa)
+   (cons 'p4 marmalade)))
 
 (condition-case nil
     (init--install-packages)
