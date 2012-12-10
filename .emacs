@@ -40,6 +40,7 @@
 (require 'setup-undo-tree)
 (require 'setup-auto-complete)
 (require 'setup-yasnippet)
+(require 'setup-p4)
 
 ;; map file extensions to modes
 (require 'mode-mappings)
