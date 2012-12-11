@@ -33,6 +33,7 @@
 (require 'setup-ido)
 (require 'setup-uniquify)
 (require 'setup-ffip)
+(require 'setup-rebuilder)
 (require 'setup-clipboard)
 
 ;; setup extensions
