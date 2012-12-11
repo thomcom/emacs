@@ -41,4 +41,8 @@
 ;; text must be 80 characters wide
 (setq-default fill-column 80)
 
+;; re-builder
+(require 're-builder)
+(setq reb-re-syntax 'string)
+
 (provide 'setup-defaults)
